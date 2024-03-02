@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Counter: <span id="counter">0</span></h1>
+
+    <script>
+        // Connect to the Socket.IO server
+        const socket = io();
+
+        // Listen for the 'counterUpdate' event
+        socket.on('counterUpdate', (count) => {
+            // Update the counter value
+            document.getElementById('counter').textContent = count;
+        });
+    </script>
+</body>
+</html>

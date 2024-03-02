@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tecnica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+    <form class="container p-3" id="form">
+
+        <h2>Token</h2>
+        <div class="form-group">
+            <label for="token">Token:</label>
+            <input type="text" class="form-control" id="token" name="token" required>
+        </div>
+
+        <h2>Origin</h2>
+        <div class="form-group">
+            <label for="origin-name">Name:</label>
+            <input type="text" class="form-control" id="origin-name" name="origin-name" value="oscar mx">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-company">Company:</label>
+            <input type="text" class="form-control" id="origin-company" name="origin-company" value="envia">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-email">Email:</label>
+            <input type="email" class="form-control" id="origin-email" name="origin-email" value="noreply@envia.com">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-phone">Phone:</label>
+            <input type="tel" class="form-control" id="origin-phone" name="origin-phone" value="8116300800">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-street">Street:</label>
+            <input type="text" class="form-control" id="origin-street" name="origin-street" value="av vasconcelos">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-number">Number:</label>
+            <input type="text" class="form-control" id="origin-number" name="origin-number" value="1400">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-district">District:</label>
+            <input type="text" class="form-control" id="origin-district" name="origin-district" value="mirasierra">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-city">City:</label>
+            <input type="text" class="form-control" id="origin-city" name="origin-city" value="Monterrey">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-state">State:</label>
+            <input type="text" class="form-control" id="origin-state" name="origin-state" value="NL">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-country">Country:</label>
+            <input type="text" class="form-control" id="origin-country" name="origin-country" value="MX">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-postalCode">Postal Code:</label>
+            <input type="text" class="form-control" id="origin-postalCode" name="origin-postalCode" value="66236">
+        </div>
+
+        <div class="form-group">
+            <label for="origin-reference">Reference:</label>
+            <input type="text" class="form-control" id="origin-reference" name="origin-reference" value="">
+        </div>
+
+        <h2>Destination</h2>
+        <div class="form-group">
+            <label for="destination-name">Name:</label>
+            <input type="text" class="form-control" id="destination-name" name="destination-name" value="oscar">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-company">Company:</label>
+            <input type="text" class="form-control" id="destination-company" name="destination-company" value="empresa">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-email">Email:</label>
+            <input type="email" class="form-control" id="destination-email" name="destination-email"
+                value="noreply@envia.com">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-phone">Phone:</label>
+            <input type="tel" class="form-control" id="destination-phone" name="destination-phone" value="8116300800">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-street">Street:</label>
+            <input type="text" class="form-control" id="destination-street" name="destination-street"
+                value="av vasconcelos">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-number">Number:</label>
+            <input type="text" class="form-control" id="destination-number" name="destination-number" value="1400">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-district">District:</label>
+            <input type="text" class="form-control" id="destination-district" name="destination-district"
+                value="palo blanco">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-city">City:</label>
+            <input type="text" class="form-control" id="destination-city" name="destination-city" value="monterrey">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-state">State:</label>
+            <input type="text" class="form-control" id="destination-state" name="destination-state" value="NL">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-country">Country:</label>
+            <input type="text" class="form-control" id="destination-country" name="destination-country" value="MX">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-postalCode">Postal Code:</label>
+            <input type="text" class="form-control" id="destination-postalCode" name="destination-postalCode"
+                value="66240">
+        </div>
+
+        <div class="form-group">
+            <label for="destination-reference">Reference:</label>
+            <input type="text" class="form-control" id="destination-reference" name="destination-reference" value="">
+        </div>
+
+        <h2>Package</h2>
+        <div class="form-group">
+            <label for="package1-content">Content:</label>
+            <input type="text" class="form-control" id="package1-content" name="package1-content"
+                value="camisetas rojas">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-amount">Amount:</label>
+            <input type="number" class="form-control" id="package1-amount" name="package1-amount" value="2">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-type">Type:</label>
+            <input type="text" class="form-control" id="package1-type" name="package1-type" value="box">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-length">Length:</label>
+            <input type="number" class="form-control" id="package1-length" name="package1-length" value="2">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-width">Width:</label>
+            <input type="number" class="form-control" id="package1-width" name="package1-width" value="5">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-height">Height:</label>
+            <input type="number" class="form-control" id="package1-height" name="package1-height" value="5">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-weight">Weight:</label>
+            <input type="number" class="form-control" id="package1-weight" name="package1-weight" value="63">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-insurance">Insurance:</label>
+            <input type="number" class="form-control" id="package1-insurance" name="package1-insurance" value="0">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-declaredValue">Declared Value:</label>
+            <input type="number" class="form-control" id="package1-declaredValue" name="package1-declaredValue"
+                value="400">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-weightUnit">Weight Unit:</label>
+            <input type="text" class="form-control" id="package1-weightUnit" name="package1-weightUnit" value="KG">
+        </div>
+
+        <div class="form-group">
+            <label for="package1-lengthUnit">Length Unit:</label>
+            <input type="text" class="form-control" id="package1-lengthUnit" name="package1-lengthUnit" value="CM">
+        </div>
+
+        <h2>Shipment</h2>
+        <div class="form-group">
+            <label for="shipment-carrier">Carrier:</label>
+            <input type="text" class="form-control" id="shipment-carrier" name="shipment-carrier" value="fedex">
+        </div>
+
+        <div class="form-group">
+            <label for="shipment-service">Service:</label>
+            <input type="text" class="form-control" id="shipment-service" name="shipment-service" value="express">
+        </div>
+
+        <div class="form-group">
+            <label for="shipment-type">Type:</label>
+            <input type="number" class="form-control" id="shipment-type" name="shipment-type" value="1">
+        </div>
+
+        <h2>Settings</h2>
+        <div class="form-group">
+            <label for="settings-printFormat">Print Format:</label>
+            <input type="text" class="form-control" id="settings-printFormat" name="settings-printFormat" value="PDF">
+        </div>
+
+        <div class="form-group">
+            <label for="settings-printSize">Print Size:</label>
+            <input type="text" class="form-control" id="settings-printSize" name="settings-printSize" value="STOCK_4X6">
+        </div>
+
+        <div class="form-group">
+            <label for="settings-comments">Comments:</label>
+            <textarea class="form-control" id="settings-comments"
+                name="settings-comments">comentarios de el envío</textarea>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+        
+        <!-- counter -->
+        <h1>Counter: <span id="counter">0</span></h1>
+
+    </form>
+
+</body>
+
+<script src="/js/index.js"></script>
+
+</html>
