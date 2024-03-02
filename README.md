@@ -25,3 +25,5 @@ Esta aplicación Node.js utiliza Express, Socket.io y Axios para generar guías 
     docker-compose up
     ```
 - La aplicación estará disponible en `http://localhost:3000`
+    - `http://localhost:3000` - Página de inicio
+    - `http://localhost:3000/counter` - Contador en tiempo real
